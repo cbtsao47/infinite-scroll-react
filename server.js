@@ -2,7 +2,7 @@ global.fetch = require("node-fetch");
 const config = require("universal-config");
 const Unsplash = require("unsplash-js").default;
 const toJson = require("unsplash-js").toJson;
-const express = requre("express");
+const express = require("express");
 
 const unsplash = new Unsplash({
   applicationId: config.get("APPLICATION_ID"),
@@ -16,7 +16,8 @@ app.get("/api/photos", (req, res) => {
   unsplash.photos
     .listPhotos(1, 30)
     .then(toJson)
-    .then(json => res.json(json));
+    .then(json => res.json(json))
+    .catch(err => err);
 });
 
 const PORT = process.env.PORT || 5000;
