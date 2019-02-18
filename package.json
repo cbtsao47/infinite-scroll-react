@@ -1,0 +1,35 @@
+{
+  "name": "infinite-scroll-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "yarn start --prefix client",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbtsao47/infinite-scroll-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbtsao47/infinite-scroll-react/issues"
+  },
+  "homepage": "https://github.com/cbtsao47/infinite-scroll-react#readme",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0",
+    "universal-config": "^0.3.0",
+    "unsplash-js": "^4.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
